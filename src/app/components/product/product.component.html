@@ -1,0 +1,17 @@
+<div class="container m-5">
+    <h1>{{ item.name }}</h1>
+    <p class="card-text">
+        <span *ngFor="let tags of item.tags; let i = index" class="badge badge-pill badge-primary"> {{ item.tags[i] }}</span>
+    </p>
+    <hr>
+    <p><strong>Customer:  </strong> {{item.customer}}</p>
+    <hr>
+    <h2>allergens</h2>
+    <p>{{item.allergens}}</p>
+    <hr>
+    <h2>ingredients</h2>
+    <p *ngFor="let ingredients of materials; let i = index"> {{keys[i]}}</p>
+
+    <br>
+    <button [routerLink]="['home']" class="btn btn-outline-secondary">Return</button>
+</div>
